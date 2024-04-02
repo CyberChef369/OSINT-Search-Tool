@@ -1,0 +1,87 @@
+<!-- Begin HTML section for search tool -->
+
+<!DOCTYPE html>
+<html>
+<body style="background-color:black;">
+
+	<title> OSINT Searcher </title>
+
+<body>
+<h1 style="font-family:Georgia, 'Times New Roman', Times, serif; color:red; text-align:left;"> OSINT Search Tool </h1>
+
+<!-- IMAGE will be added later on-->
+<img src="logo.png" alt="ProfilePic" width="300" height="300">
+
+</body>
+
+</html>
+ <br> <br>
+
+  <label style="color:tomato;"> IP Search: </label>
+  	<input type="text" id="IP" name="IP">
+  	<button onclick="searchIP()"> Search </button>
+ 	<br> <br>
+
+  <label style="color:orange;"> Domain Search: </label>
+  	<input type="text" id="Domain" name="Domain">
+  	<button onclick="searchDomain()"> Search </button>
+  	<br> <br>
+
+  <label style="color:lightgreen;"> Hash Search: </label>
+  	<input type="text" id="Hash" name="Hash">
+  	<button onclick="searchHash()"> Search </button>
+  	<br> <br>
+
+<h2 style="font-family:Georgia, 'Times New Roman', Times, serif; color:violet; text-align:left;"> Additional Pivot Links </h2>
+  <button onclick="shodan()"> Shodan.io </button>
+  <br> <br>
+  <button onclick="URLscan()"> URLscan.io </button>
+  <br> <br>
+
+    
+<!-- End HTML section for search tool -->
+
+<!-- Begin Javascript section for search scripts -->
+
+<script>
+	function searchIP() 
+
+		{ 
+			window.open('https://www.virustotal.com/gui/ip-address/' + document.getElementById('IP').value);
+			window.open('https://www.abuseipdb.com/check/' + document.getElementById('IP').value);
+			window.open('https://exchange.xforce.ibmcloud.com/ip/' + document.getElementById('IP').value);
+			window.open('https://otx.alienvault.com/indicator/ip/' + document.getElementById('IP').value);
+		}
+
+function searchDomain() 
+
+		{ 
+			window.open('https://www.virustotal.com/gui/domain/' + document.getElementById('Domain').value);
+			window.open('https://otx.alienvault.com/indicator/domain/' + document.getElementById('Domain').value);
+			window.open('https://exchange.xforce.ibmcloud.com/url/' + document.getElementById('Domain').value);
+
+		}
+
+function searchHash() 
+
+		{ 
+			window.open('https://www.virustotal.com/gui/search/' + document.getElementById('Hash').value);
+			window.open('https://otx.alienvault.com/indicator/file/' + document.getElementById('Hash').value);
+			window.open('https://exchange.xforce.ibmcloud.com/search/' + document.getElementById('Hash').value);
+		}
+
+function shodan() 
+
+		{ 
+			window.open('https://shodan.io/');
+		}
+
+function URLscan() 
+
+		{ 
+			window.open('https://urlscan.io/');
+		}
+	
+</script>
+
+<!-- End Javascript section for search scripts -->
